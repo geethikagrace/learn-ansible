@@ -1,0 +1,8 @@
+- name: Demoon first playbook
+   host: all
+   task:
+     - name: Print hello world
+       ansible.builtin.debug:
+         msg: hello world
+
+
