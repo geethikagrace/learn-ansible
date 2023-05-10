@@ -1,4 +1,4 @@
-- name: Demoon first playbook
+- name: Demo on first playbook
    host: all
    task:
      - name: Print hello world
