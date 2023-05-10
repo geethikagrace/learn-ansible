@@ -13,3 +13,15 @@
 # quotes are mandatory if value starts with a variable , meaning
 # msg: {{ URL }} <- This requires quoting
 # msg: URL - {{ URL }} <- This does not require quoting
+
+
+- name: Demo on play level  variable
+  hosts: all
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
+      vars:
+        URL: play.example.com
+
+# # Only that task have that variable, other tasks cannot access it.
